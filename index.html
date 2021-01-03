@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!--CSS FLEXBOX #1 (INTRODUCTION)
+    Without Flexbox
+    - Use diff. positional prop
+    - Floats and clear fixes
+    - Fixed heights for columns
+
+    With Flexbox
+    - to craft CSS Layout much easier
+    - control pos., size, spacing of el. relative to their parent el. and each other
+    - works great responsively
+
+    Benefits
+    - Nav bars & menus
+    - Grid layouts
+    - Bar charts
+    - Equal height columns-->
+    
+    <!--CSS FLEXBOX #2-->
+    <h2>CSS FLEXBOX #2 (FLEX CONTAINER)</h2>
+    <!--Apply a display type of flex to the parent container-->
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+        </div>
+
+    <!--CSS FLEXBOX #3-->
+    <h2>CSS FLEXBOX #3 (FLEX GROW)</h2>
+    <p>siehe die Boxen (Nehmen auto. den freien Platz ein)</p>
+
+    <!--CSS FLEXBOX #4-->
+    <h2>CSS FLEXBOX #4 (FLEX SHRINK)</h2>
+    <div class="flex-container_4">
+        <div class="box_4 one_4"></div>
+        <div class="box_4 two_4"></div>
+        <div class="box_4 three_4"></div>
+    </div>
+
+    <!--CSS FLEXBOX #5-->
+    <h2>CSS FLEXBOX #5 (FLEX WRAP)</h2>
+    <div class="flex-container_5">
+        <div class="box_5 one_5"></div>
+        <div class="box_5 two_5"></div>
+        <div class="box_5 three_5"></div>
+    </div>
+
+    <!--CSS FLEXBOX #6-->
+    <h2>CSS FLEXBOX #6 (FLEX BASIS)</h2>
+    <div class="flex-container_6">
+        <div class="box_6 one_6"></div>
+        <div class="box_6 two_6"></div>
+        <div class="box_6 three_6"></div>
+    </div>
+
+    <!--CSS FLEXBOX #7-->
+    <h2>CSS FLEXBOX #7 (EXAMPLE 1 - FLEX MENU)</h2>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--CSS FLEXBOX #8-->
+    <h2>CSS FLEXBOX #8 (EXAMPLE 2 - NESTED FLEX MENU)</h2>
+
+    <nav id="nav_8">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <ul class="social">
+            <li><a class="fb" href="">Facebook</a></li>
+            <li><a class="tw" href="">Twitter</a></li>
+        </ul>
+    </nav>
+
+    <!--CSS FLEXBOX #9-->
+    <h2>CSS FLEXBOX #9 (FLOW & AXIS)</h2>
+    <div class="flex-container_9">
+        <div class="box_9 one_9"></div>
+        <div class="box_9 two_9"></div>
+        <div class="box_9 three_9"></div>
+    </div>
+
+    <!--CSS FLEXBOX #10-->
+    <h2>CSS FLEXBOX #10 (ALIGN ITEMS)</h2>
+    <div class="flex-container_10">
+        <div class="box_10 one_10"></div>
+        <div class="box_10 two_10"></div>
+        <div class="box_10 three_10"></div>
+    </div>
+
+    <!--CSS FLEXBOX #11-->
+    <h2>CSS FLEXBOX #11 (EXAMPLE 3 - GRID & STACK LAYOUT)</h2>
+
+    <nav id="nav_11">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <ul class="social_11">
+            <li><a class="fb_11" href="">Facebook</a></li>
+            <li><a class="tw_11" href="">Twitter</a></li>
+        </ul>
+    </nav>
+
+    <div style="margin: 20px;">
+        <span>Layout: </span>
+        <a href="#" class="stack">Stack</a>
+        <a href="#" class="grid">Grid</a>
+    </div>
+
+    <section id="blocks">
+        <article class="article">
+            <h2>I pity the fool...</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis facilis autem deserunt impedit ea hic id rerum error non aliquid mollitia excepturi, officiis, vero et magnam ut asperiores ad delectus expedita a, debitis maiores unde. Placeat facere tempora assumenda ea maxime quibusdam perferendis quae quaerat unde consectetur, deleniti fugiat doloremque!</p>
+        </article>
+        <article class="article">
+            <h2>Get to the chopper...</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facere, quas fugit, nulla necessitatibus labore perspiciatis molestias, similique autem eius excepturi eligendi neque amet sapiente tempora. Aperiam accusantium officia molestiae impedit beatae temporibus repudiandae quaerat, molestias veniam, eos est asperiores similique nesciunt, eaque magnam voluptates maiores autem doloribus praesentium numquam.</p>
+        </article>
+        <article class="article">
+            <h2>I pity the fool...</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, ea impedit minima quam nesciunt sunt possimus praesentium excepturi ex debitis nisi similique reprehenderit, quaerat corporis blanditiis ipsa molestias quae? Aspernatur doloremque recusandae nihil officia at cum harum perspiciatis autem mollitia dolor, voluptate fugiat! Ea illo ab, quia est in necessitatibus.</p>
+        </article>
+        <article class="article">
+            <h2>Get to the chopper...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque molestias eaque omnis alias sint nulla voluptatem impedit quae ut, earum laborum at nobis quis quisquam nostrum ipsa id provident iusto. Error nisi consequatur quae amet cumque delectus sint consequuntur officiis dolorem vitae minus doloremque, id corporis ipsum veritatis numquam beatae!</p>
+        </article>
+        <article class="article">
+            <h2>I pity the fool...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus magni dolorem nam consequatur libero obcaecati dignissimos eius aliquam voluptatibus necessitatibus, sed asperiores quidem quam adipisci iste consectetur, esse velit aspernatur, non veritatis sequi! Distinctio consequuntur porro quis quod esse consectetur, sequi aut velit mollitia ipsa illum reprehenderit quibusdam ullam cupiditate!</p>
+        </article>
+        <article class="article">
+            <h2>Get to the chopper...</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa odit omnis officiis perferendis porro dignissimos nam vel suscipit non, culpa ut quam praesentium nihil eaque alias iusto dolor quae ad cupiditate fuga repellat id harum voluptatibus minus. Dolorum, quasi fugit sunt aperiam recusandae impedit, velit delectus quia repudiandae similique pariatur.</p>
+        </article>
+    </section>
+
+    <!--CSS FLEXBOX #12-->
+    <h2>CSS FLEXBOX #12 (ELEMENT ORDER)</h2>
+    <section id="blocks_12">
+        <div class="one_12">1</div>
+        <div class="two_12">2</div>
+        <div class="three_12">3</div>
+        <div class="four_12">4</div>
+    </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

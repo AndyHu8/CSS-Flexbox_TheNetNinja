@@ -1,0 +1,132 @@
+/*CSS FLEXBOX #2*/
+.wrapper {width: 100%; max-width: 960px; margin: 0 auto;}
+.flex-container {display: flex; background: grey;}
+.box {height: 100px; min-width: 100px;}
+.one {background: red;}
+.two {background: blue;}
+.three {background: green;}
+
+/*CSS FLEXBOX #3*/
+.box {flex-grow: 0;} /*nimmt den Platz auto. ein, wenn er frei ist*/
+.one {flex-grow: 1;} /*auch bestimmbar, wie groß/lang die einzelnen Boxen sein sollen*/
+.two {flex-grow: 2;}
+.three {flex-grow: 3;}
+
+/*CSS FLEXBOX #4*/
+.flex-container_4 {display: flex; background: grey;}
+.box_4 {height: 100px; width: 320px;}
+.one_4 {background: red; flex-shrink: 1;} /*Sobald das Fenster kleiner wird bzw. kein Platz mehr da ist, beginnt die Proportion: Je größer die Zahl, desto mehr Platz*/
+.two_4 {background: blue; flex-shrink: 2;}
+.three_4 {background: green; flex-shrink: 3;}
+
+/*CSS FLEXBOX #5*/
+.flex-container_5 {display: flex; background: grey; flex-wrap: wrap;}
+.box_5 {height: 100px; min-width: 200px; flex-grow: 1;} /*Mit flex-wrap: sobald die min-width nicht ausreicht => box geht auto. in die nächste Zeile*/
+.one_5 {background: red;}
+.two_5 {background: blue;}
+.three_5 {background: green;}
+
+/*CSS FLEXBOX #6*/
+.flex-container_6 {display: flex; background: grey; flex-wrap: wrap;}
+.box_6 {height: 100px; flex-basis: 500px;} /*Ist wie min-width, UNTERSCHIED: Bei zu kleinem width => KEIN Scrollbar von links nach rechts*/
+.one_6 {background: red;}
+.two_6 {background: blue;}
+.three_6 {background: green;}
+/*ABKÜRZUNG: nur flex: 1 0 200px = 1.Flex-Grow, 2. Flex-Shrink, 3.Flex-Basis*/
+
+/*CSS FLEXBOX #7*/
+/*menu base styles*/
+nav {background: #333;}
+nav ul {list-style-type: none; padding: 0;}
+nav a {text-decoration: none; text-align: center; color: white; display: block; padding: 10px;}
+nav a:hover {background-color:#555;}
+
+/*flex styles*/
+@media screen and (min-width: 768px)
+{
+    nav ul {display: flex; justify-content: flex-end} /*justify-content: Anordnung nur ohne flex 1 1 0*/
+    nav li {flex: 1 1 0;} /*flex-grow, flex-shrink, flex-basis*/ 
+}
+
+/*CSS FLEXBOX #8*/
+/*menu base styles*/
+#nav_8 {background: #333;}
+#nav_8 ul {list-style-type: none; padding: 0;}
+#nav_8 a {text-decoration: none; text-align: center; color: white; display: block; padding: 10px;}
+#nav_8 a:hover {background-color:#555;}
+
+/*social menu base styles*/
+a.tw {background: url(twitter.png) no-repeat center; background-size: 80%;}
+a.fb {background: url(facebook.png) no-repeat center; background-size: 80%;}
+.social a {text-indent: -10000px;}
+.social {max-width: 80px; margin: 0 auto;}
+
+/*flex styles*/
+#nav_8 ul.social {flex: 1 1 0; display: flex;}
+#nav_8 ul.social li {flex: 1 1 0;}
+
+@media screen and (min-width: 768px)
+{
+    #nav_8 {display: flex; justify-content: space-between;} /*2 Flex-items: normal-ul, social-ul*/
+    #nav_8 ul {display: flex; justify-content: flex-end}
+    #nav_8 li {flex: 1 1 0;}
+    .social {margin: 0; margin-top: 15px;}
+}
+
+/*CSS FLEXBOX #9*/
+.flex-container_9 {display: flex; background: grey; flex-wrap: wrap; flex-flow: row; justify-content: center;} /*flex-flow: bestimmt ob waargerecht/senkrecht die boxen
+(bestimmt die Richtung der Main-Axis*/
+.box_9 {height: 100px; flex: 0 0 200px;}
+.one_9 {background: red;}
+.two_9 {background: blue;}
+.three_9 {background: green;}
+
+/*CSS FLEXBOX #10*/
+.flex-container_10 {display: flex; background: grey; flex-wrap: wrap; flex-flow: row; height: 600px; align-items: center; justify-content: center;} 
+/*Align-itmes: Bestimmt Anordnung in Richtung Cross-Axis | Justify-Content: Bestimmt Anordnung in Richtung Main-Axis)*/
+.box_10 {height: 100px; flex: 0 0 100px;}
+.one_10 {background: red;}
+.two_10 {background: blue;}
+.three_10 {background: green;}
+
+/*CSS FLEXBOX #11*/
+/*menu base styles*/
+#nav_11 {background: #333;}
+#nav_11 ul {list-style-type: none; padding: 0;}
+#nav_11 a {text-decoration: none; text-align: center; color: white; display: block; padding: 10px;}
+#nav_11 a:hover {background-color:#555;}
+
+/*social menu base styles*/
+a.tw_11 {background: url(twitter.png) no-repeat center; background-size: 80%;}
+a.fb_11 {background: url(facebook.png) no-repeat center; background-size: 80%;}
+.social_11 a {text-indent: -10000px;}
+.social_11 {max-width: 80px; margin: 0 auto;}
+
+/*Grid vs flex base styles*/
+#blocks {margin: 20px;}
+article {background: white; margin-bottom: 20px; padding: 10px; box-sizing: border-box;}
+article h2 {text-align: center; font-size: 20px; margin: 10px 0}
+
+/*flex styles*/
+#nav_11 ul.social_11 {flex: 1 1 0; display: flex;}
+#nav_11 ul.social_11 li {flex: 1 1 0;}
+
+@media screen and (min-width: 768px)
+{
+    #nav_11 {display: flex; justify-content: space-between;}
+    #nav_11 ul {display: flex; justify-content: flex-end}
+    #nav_11 li {flex: 1 1 0;}
+    .social_11 {margin: 0; margin-top: 15px;}
+
+    #blocks {display: flex; flex-wrap: wrap; justify-content: space-between;}
+    article {flex: 0 1 32%; transition: flex-basis 0.2s linear;} /*Geht in nächste Zeiler, sobald 32% nicht mehr ausreicht*/
+    article.stack {flex: 0 1 100%;}
+}
+
+/*CSS FLEXBOX #12*/
+#blocks_12 {display: flex; margin: 10px; justify-content: space-between;}
+#blocks_12 div {flex: 0 0 100px; padding: 40px 0; text-align: center; background: #ccc;}
+.one_12 {order: 3;} /*Ändert die Anordnung: Größte Zahl ist immer ganz hinten (Minus-Zahlen sind kleiner als 0)*/
+.two_12 {order: 2;}
+.three_12 {order: 0;}
+.four_12 {order: 0;}
